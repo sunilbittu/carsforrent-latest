@@ -1,14 +1,14 @@
 <section fxLayout="column" fxFlexAlign="stretch">
-  <div fxFlexAlign="center">
-    <p>Results</p>
-  </div>
+  
   <div class="page page-checkout sub-page">
     <div class="payment">
       <div class="car-info-container">
         <div class="car-name">{{ carInfo.carName }}</div>
         <div class="info-container">
+          <div class="car-info">
           <mat-icon>aspect_ratio</mat-icon>
           <span>{{ carInfo.transmission }}</span>
+        </div>
           <div class="car-info">
             <mat-icon> local_gas_station</mat-icon>
             <span>{{ carInfo.fuelType }}</span>

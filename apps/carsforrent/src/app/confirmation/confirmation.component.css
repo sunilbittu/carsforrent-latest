@@ -1,7 +1,4 @@
-#container {
-  position: absolute;
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+#container { 
 }
 h1 {
   font-size: 0.9em;
@@ -12,8 +9,9 @@ h1 {
   padding-bottom: 5px;
   text-transform: uppercase;
 }
-.green {
-  color: #4ec07d;
+.blue {
+  color: #673ab7;
+    font-size: 14px;
 }
 .red {
   color: #e96075;
@@ -41,7 +39,7 @@ button,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(to bottom right, #b0db7d 40%, #99dbb4 100%);
+  background: linear-gradient(to bottom right, #673ab7 40%, #c8b4eb 100%);
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgba(203, 205, 211, 10);
   perspective: 40px;
@@ -143,7 +141,7 @@ button,
 }
 .button-box {
   position: absolute;
-  background: #fcfcfc;
+  background: #fff;
   width: 50%;
   height: 15%;
   border-radius: 20px;

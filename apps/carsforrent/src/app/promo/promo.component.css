@@ -1,26 +1,19 @@
 .promo-wrapper {
-    background-color: #50E3C2;
-    background-image: 
-        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
-        radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
-        border-radius: 8px;
+  
 }
 .promo-wrapper .promo {
-    margin: 16px;
-    padding-top: 0;
+    margin: 50px auto; 
 }
 
 @media (min-width: 1200px) {
 .promo-wrapper .promo {
-    max-width: 1016px;
-    margin: 0 auto;
+    max-width: 1016px; 
 }
 }
 
 @media (min-width: 900px) {
 .promo-wrapper .promo {
-    max-width: 100%;
-    margin: 0 16px;
+    max-width: 100%; 
     display: flex;
     flex-flow: row wrap;
 }
@@ -28,8 +21,7 @@
 
 @media (min-width: 767px)  {
 .promo-wrapper .promo {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 600px; 
     padding-top: 0;
     padding-bottom: 16px;
 }

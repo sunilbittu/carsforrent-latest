@@ -1561,7 +1561,7 @@ bootstrap();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/sb/workspace/carsforrent/carsforrent/apps/api/src/main.ts */"./apps/api/src/main.ts");
+module.exports = __webpack_require__(/*! /home/sb/workspace/carsforrent_latest/carsforrent-latest/apps/api/src/main.ts */"./apps/api/src/main.ts");
 
 
 /***/ }),
