@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a routerLink="/home">Car Rentals</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li *ngIf="isAdmin">
+        <mat-list-item [matMenuTriggerFor]="menu">
+          <a matline>My Profile</a>
+        </mat-list-item>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="handleCars()">Cars</button>
+          <button mat-menu-item (click)="handleBookings()">Bookings</button>
+        </mat-menu>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/login">LogIn</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,194 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div fxFlexAlign="center">
+    <p>Results</p>
+  </div>
+  <div class="page page-checkout sub-page">
+    <div class="payment">
+      <div class="car-info-container">
+        <div class="car-name">{{ carInfo.carName }}</div>
+        <div class="info-container">
+          <mat-icon>aspect_ratio</mat-icon>
+          <span>{{ carInfo.transmission }}</span>
+          <div class="car-info">
+            <mat-icon> local_gas_station</mat-icon>
+            <span>{{ carInfo.fuelType }}</span>
+          </div>
+        </div>
+        <div class="car-image">
+          <img class="car-original-image" src="{{ carInfo.img }}" />
+        </div>
+      </div>
+      <div class="car-trip-details">
+        <div class="trip-info-container">
+          <div class="car-trip-info">
+            <div class="icon start-icon">
+              <div><mat-icon>home</mat-icon></div>
+            </div>
+            <div class="content-container">
+              <div class="content-text">
+                {{ carInfo.start | dateformatter: 'MMMM Do YYYY' }}
+              </div>
+              <div class="content-sub-text">{{ carInfo.city }}</div>
+            </div>
+          </div>
+          <div class="connector"></div>
+          <div class="car-trip-info">
+            <div class="icon destination-icon">
+              <div><mat-icon>home</mat-icon></div>
+            </div>
+            <div class="content-container">
+              <div class="content-text">
+                {{ carInfo.end | dateformatter: 'MMMM Do YYYY' }}
+              </div>
+              <div class="content-sub-text">{{ carInfo.city }}</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="checkout-card-container">
+              <div class="icon">
+                <img
+                  src="https://zoomcar-assets.zoomcar.com/images/original/ccedfb3dddda918d76ad27240ffa582f4a59a157.png?1584454852"
+                  alt="icon"
+                />
+              </div>
+              <div class="content-container">
+                <div class="content-text content-text">
+                  150 Kms without Fuel
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="checkout-card-container">
+              <div class="icon">
+                <mat-icon>star</mat-icon>
+              </div>
+              <div class="content-container">
+                <div class="content-text content-text">
+                  {{ carInfo.rating }} ({{ carInfo.numReviews }})
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="location-desclaimer">
+          <div>
+            You will get a clean and sanitized car. Exact car location will be
+            shared post-booking
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-section-container">
+          <div data-id="HD">Home Delivery</div>
+          <div>
+            <div>
+              <div class="checkout-card-container">
+                <div class="icon disable-item">
+                  <mat-icon>assignment_turned_in</mat-icon>
+                </div>
+                <div class="content-container">
+                  <div class="content-text-disabled content-text">
+                    Delivery &amp; Pick Up
+                  </div>
+                  <div class="error-msg">
+                    HD option available for bookings starting at-least 3 hours
+                    after the current time
+                  </div>
+                </div>
+                <label class="checkbox-container disable-item">
+                  <input type="checkbox" />
+                  <div id="PICKUP" class="control-indicator"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card-section-container">
+          <div data-id="KEEP_IN_MIND">Keep In Mind</div>
+          <div>
+            <div>
+              <div class="checkout-card-container">
+                <div class="icon">
+                  <mat-icon>fingerprint</mat-icon>
+                </div>
+                <div class="content-container">
+                  <div class="content-text content-text">
+                    Driving License Mandatory
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="checkout-card-container">
+                <div class="icon">
+                  <mat-icon> local_gas_station</mat-icon>
+                </div>
+                <div class="content-container">
+                  <div class="content-text content-text">
+                    Fare &amp; Fuel Policy
+                  </div>
+                  <div class="content-sub-text">
+                    Fare is inclusive of all taxes. Excess charge ₹11/km. Kindly
+                    return the car at the same fuel level as the trip start time
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="checkout-card-container">
+                <div class="icon">
+                  <mat-icon>cancel</mat-icon>
+                </div>
+                <div class="content-container">
+                  <div class="content-text content-text">
+                    Cancellation Policy
+                  </div>
+                  <div class="content-sub-text">
+                    Hassle free cancellations and refunds at nominal charges
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="checkout-card-container">
+                <div class="icon">
+                  <mat-icon>assignment</mat-icon>
+                </div>
+                <div class="content-container">
+                  <div class="content-text content-text">Agreement Policy</div>
+                  <div class="content-sub-text">
+                    By Submitting, agree to the terms and conditions of the
+                    Lease Agreement with Host
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="payment-details">
+      <div class="price-coupon-container">
+        <div class="price-container">
+          <div class="final-price">£{{ carInfo.price }}</div>
+        </div>
+      </div>
+      <div>
+        <button class="payment-action" (click)="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+.promo-wrapper {
+    background-color: #50E3C2;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
+        border-radius: 8px;
+}
+.promo-wrapper .promo {
+    margin: 16px;
+    padding-top: 0;
+}
+
+@media (min-width: 1200px) {
+.promo-wrapper .promo {
+    max-width: 1016px;
+    margin: 0 auto;
+}
+}
+
+@media (min-width: 900px) {
+.promo-wrapper .promo {
+    max-width: 100%;
+    margin: 0 16px;
+    display: flex;
+    flex-flow: row wrap;
+}
+}
+
+@media (min-width: 767px)  {
+.promo-wrapper .promo {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 16px;
+}
+}
+
+.promo-wrapper .promo .card {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 900px) {
+.promo-wrapper .promo>div {
+    flex: 40%;
+    margin: 16px;
+}
+}
+
+.promo-wrapper .promo .card a {
+    display: block;
+}
+
+.promo-wrapper .promo .card img {
+    width: 100%;
+    border-radius: 4px;
+}

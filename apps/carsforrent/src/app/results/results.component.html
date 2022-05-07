@@ -1,0 +1,75 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div fxFlexAlign="center">
+  </div>
+  <div class="search-container">
+     <div class="filter-container">
+      <div class="sort-container">
+        <mat-card>
+          <mat-card-header class="heading">Seats</mat-card-header>
+          <mat-card-actions class="btn-actns">
+            <button mat-button>5</button>
+            <button mat-button>7</button>
+          </mat-card-actions>
+          <mat-card-header class="heading">Car Types</mat-card-header>
+          <mat-card-actions class="btn-actns">
+            <button mat-button>SUV</button>
+            <button mat-button>Hatch Back</button>
+          </mat-card-actions>
+          <mat-card-header class="heading">Transmission</mat-card-header>
+          <mat-card-actions class="btn-actns">
+            <button mat-button>Manual</button>
+            <button mat-button>Automatic</button>
+          </mat-card-actions>
+          <mat-card-header class="heading">Delivery Type</mat-card-header>
+          <mat-card-actions class="btn-actns">
+            <button mat-button>Home</button>
+            <button mat-button>Airport</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div class="no-results" *ngIf="!cars?.length">
+      No Rentals found for selected criteria
+    </div>
+    <div class="carslistGroup">
+      <div class="cars-list" *ngFor="let item of cars">
+        <mat-card class="cart-item">
+          <div class="component-car-item pointer item">
+            <div class="info">
+              <div class="desc">
+                <div class="car-name-location ellipsis">
+                  <h3>{{ item.carName }}</h3>
+                </div>
+                <div class="seater">
+                  {{ item.carType }} . {{ item.fuelType }} .{{ item.seats }}
+                  Seats
+                </div>
+                <div class="car-item-extras">
+                  <div class="car-item-message">
+                    <div>
+                      <mat-icon>star</mat-icon>
+                    </div>
+                    <div class="text">
+                      {{ item.rating }} ({{ item.numReviews }}) ·
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="img">
+                <img src="{{ item.img }}" alt="" />
+              </div>
+            </div>
+            <div class="price-book-ctr">
+              <div class="price-bar d-f ai-c ta-c">£ {{ item.price }}</div>
+              <div class="book">
+                <button class="pointer" (click)="handleBookNow(item)">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

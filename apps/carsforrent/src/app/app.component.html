@@ -1,0 +1,18 @@
+<carsforrent-layout>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <carsforrent-sidenav-list
+        (sidenavClose)="sidenav.close()"
+      ></carsforrent-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <carsforrent-header
+        (sidenavToggle)="sidenav.toggle()"
+      ></carsforrent-header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+      <carsforrent-footer></carsforrent-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</carsforrent-layout>

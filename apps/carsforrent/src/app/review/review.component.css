@@ -1,0 +1,464 @@
+.page {
+  height: 100%;
+  min-height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sub-page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  z-index: 999;
+  -webkit-animation: 0.3s fadeInUp ease;
+  animation: 0.3s fadeInUp ease;
+}
+
+.page-checkout .payment {
+  overflow: auto;
+  height: calc(100% - 180px);
+  padding-bottom: 10%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-checkout .car-info-container {
+  position: relative;
+  padding: 0px 16px;
+  background-color: #f5f5f5;
+}
+
+.page-checkout .car-info-container .car-name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  color: #1f1f1f;
+}
+
+.page-checkout .car-info-container .info-container {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 24px;
+}
+.page-checkout .car-info-container .info-container .car-info {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #666;
+}
+.car-trip-details .trip-info-container .car-trip-info .icon.start-icon {
+  border-radius: 12px;
+  background-color: #e6ffea;
+}
+
+.car-trip-details .trip-info-container .car-trip-info .icon {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+}
+.icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+
+.page-checkout .car-info-container .info-container .car-info:last-child {
+  padding-left: 16px;
+}
+
+.page-checkout .car-info-container .car-image {
+  position: absolute;
+  right: 0;
+  top: -8px;
+  width: 152px;
+  max-height: 110px;
+}
+
+.car-trip-details {
+  padding: 12px 16px 12px;
+  position: relative;
+}
+
+.car-trip-details .trip-info-container {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+}
+
+.car-trip-details .trip-info-container .car-trip-info {
+  padding: 16px 0px 0px;
+  display: flex;
+}
+
+.car-trip-details .trip-info-container .connector {
+  width: 2px;
+  height: 34px;
+  background-image: linear-gradient(to bottom, #e6ffea, #fff3f0);
+  position: absolute;
+  top: 46px;
+  left: 27px;
+}
+
+.car-trip-details .trip-info-container .car-trip-info .icon.destination-icon {
+  width: 20px;
+  height: 20px;
+  padding: 7px;
+  margin: 0px 2px;
+  background-color: #fff3f0;
+}
+
+.car-trip-details .trip-info-container .car-trip-info .icon {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+}
+.car-trip-details .trip-info-container .car-trip-info .icon.start-icon div {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #10a310;
+}
+
+.car-trip-details
+  .trip-info-container
+  .car-trip-info
+  .icon.destination-icon
+  div {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #e02d2d;
+}
+
+.car-trip-details .trip-info-container .car-trip-info .content-container {
+  flex: 1;
+  padding-left: 8px;
+}
+
+.car-trip-details
+  .trip-info-container
+  .car-trip-info
+  .content-container
+  .content-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+}
+
+.car-trip-details
+  .trip-info-container
+  .car-trip-info
+  .content-container
+  .content-sub-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+}
+
+.checkout-card-container {
+  padding: 16px 0px 0px;
+  display: flex;
+}
+
+.checkout-card-container .icon img {
+  width: 24px;
+}
+
+.checkout-card-container .content-container {
+  flex: 2;
+  padding-left: 8px;
+}
+
+.checkout-card-container .content-container .content-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+}
+
+.car-trip-details .location-desclaimer {
+  background-color: #f0f4ff;
+  padding: 12px 40px 12px 16px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.checkout-card-container .disable-item {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.checkout-card-container .content-container .content-text-disabled {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #a8a8a8;
+}
+
+.checkout-card-container .content-container .error-msg {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #e02d2d;
+}
+
+.card-section-container {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+  padding: 32px 16px 0px;
+}
+
+.checkout-card-container .content-container .content-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  color: #1f1f1f;
+}
+
+.checkout-card-container .content-container .content-sub-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+}
+
+.checkout-card-container .content-container .content-recommended-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #a8a8a8;
+  letter-spacing: 2px;
+  color: #10a310;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.checkout-card-container .radio-container {
+  display: block;
+  position: relative;
+  padding-left: 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkout-card-container .radio-container input[type='radio'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: none;
+}
+
+.checkout-card-container .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkout-card-container .checkbox-container input[type='checkbox'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: none;
+}
+
+.checkout-card-container
+  .radio-container
+  input[type='radio']:checked
+  ~ .control-indicator {
+  border-color: #10a310;
+}
+
+.checkout-card-container
+  .checkbox-container
+  input[type='checkbox']:checked
+  ~ .control-indicator {
+  border: none;
+  background: #10a310;
+}
+
+.checkout-card-container .radio-container .control-indicator {
+  position: relative;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  border: 1px solid #666666;
+  border-radius: 50%;
+}
+
+.checkout-card-container.bg-grey {
+  padding: 12px 16px 16px 8px;
+  margin-top: 16px;
+  background-color: #f5f5f5;
+}
+
+.checkout-card-container .content-container .bg-grey-sub-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #1f1f1f;
+  color: #1f1f1f;
+}
+
+.checkout-card-container .content-container .card-hyperlink {
+  padding-top: 8px;
+  text-decoration: underline;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #10a310;
+}
+
+.checkout-card-container
+  .checkbox-container
+  input[type='checkbox']:checked
+  ~ .control-indicator:after {
+  display: block;
+}
+
+.payment-details {
+  background: #fff;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%),
+    0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+
+.payment-details .price-coupon-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  align-items: baseline;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.payment-details .price-coupon-container .price-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.payment-details .price-coupon-container .final-price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #1f1f1f;
+}
+
+.payment-details .payment-action {
+  border: none;
+  border-radius: 4px;
+  background-color: #10a310;
+  padding: 16px 20px;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-address-new {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.address-form {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 2px 3px 3px #ccc;
+}
+.address-text {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  margin-bottom: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+.locality {
+  margin-top: 4px;
+  color: #666;
+}
+.city {
+  margin-top: 16px;
+  color: #666;
+}
+.button-wrapper.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 16px;
+  background-color: white;
+  box-shadow: 1px 1px 10px 3px #ccc;
+}
+
+.suggestions {
+  background-color: #a8a8a8;
+  color: #000;
+  border-radius: 0px 0px 10px 10px;
+}
+.suggestions li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block;
+}
+
+.car-image {
+  height: 16px;
+  width: 16px;
+}
+
+.car-original-image {
+  height: 110px;
+  width: 155px;
+}

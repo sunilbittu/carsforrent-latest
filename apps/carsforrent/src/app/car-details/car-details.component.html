@@ -1,0 +1,287 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-title>Car Information</mat-card-title>
+
+    <mat-card-content>
+      <div class="row">
+        <div class="col col-sm-12">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Name" formControlName="carName" />
+          </mat-form-field>
+        </div>
+        <div class="col col-sm-12">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Brand" formControlName="brand">
+              <mat-option
+                *ngFor="let item of brands"
+                [value]="item.abbreviation"
+              >
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="addressForm.controls['brand'].hasError('required')"
+            >
+              Brand is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col col-sm-12">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Seats" formControlName="seats" />
+            <mat-error
+              *ngIf="addressForm.controls['seats'].hasError('required')"
+            >
+              Seats is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Car Type" formControlName="carType">
+              <mat-option
+                *ngFor="let type of types"
+                [value]="type.abbreviation"
+              >
+                {{ type.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="addressForm.controls['carType'].hasError('required')"
+            >
+              Car Type is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select
+              placeholder="Transmission"
+              formControlName="transmission"
+            >
+              <mat-option
+                *ngFor="let item of transmissions"
+                [value]="item.abbreviation"
+              >
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="addressForm.controls['transmission'].hasError('required')"
+            >
+              Transmission is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select
+              placeholder="Delivery Type"
+              formControlName="deliveryType"
+            >
+              <mat-option
+                *ngFor="let item of deliveryTypes"
+                [value]="item.abbreviation"
+              >
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="addressForm.controls['deliveryType'].hasError('required')"
+            >
+              Delivery Type is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Fuel Type" formControlName="fuelType">
+              <mat-option
+                *ngFor="let fuelType of fuelTypes"
+                [value]="fuelType.abbreviation"
+              >
+                {{ fuelType.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="addressForm.controls['fuelType'].hasError('required')"
+            >
+              Fuel Type is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Price" formControlName="price" />
+            <mat-error
+              *ngIf="addressForm.controls['price'].hasError('required')"
+            >
+              freeKms <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Free Kms" formControlName="freeKms" />
+            <mat-error
+              *ngIf="addressForm.controls['freeKms'].hasError('required')"
+            >
+              price <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="Delivery Charges"
+              formControlName="deliveryCharges"
+            />
+            <mat-error
+              *ngIf="
+                addressForm.controls['deliveryCharges'].hasError('required')
+              "
+            >
+              Delivery Charges is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="Rent Per Hour"
+              formControlName="rentPerHour"
+            />
+            <mat-error
+              *ngIf="addressForm.controls['rentPerHour'].hasError('required')"
+            >
+              Rent Per Hour is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="capacity" formControlName="capacity" />
+            <mat-error
+              *ngIf="addressForm.controls['capacity'].hasError('required')"
+            >
+              capacity <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="countInStock"
+              formControlName="countInStock"
+            />
+            <mat-error
+              *ngIf="addressForm.controls['countInStock'].hasError('required')"
+            >
+              countInStock <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="rating" formControlName="rating" />
+            <mat-error
+              *ngIf="addressForm.controls['rating'].hasError('required')"
+            >
+              rating is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="numReviews"
+              formControlName="numReviews"
+            />
+            <mat-error
+              *ngIf="addressForm.controls['numReviews'].hasError('required')"
+            >
+              numReviews is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Start Date</mat-label>
+            <input
+              matInput
+              [min]="minDate"
+              [matDatepicker]="picker"
+              (dateChange)="handleDateChange('change', $event, 'pkp')"
+            />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>End Date</mat-label>
+            <input
+              matInput
+              [min]="dMinDate"
+              [matDatepicker]="dpicker"
+              (dateChange)="handleDateChange('change', $event, 'dlv')"
+            />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="dpicker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #dpicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              placeholder="locations"
+              formControlName="locations"
+            />
+            <mat-error
+              *ngIf="addressForm.controls['locations'].hasError('required')"
+            >
+              locations <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="note" formControlName="note" />
+            <mat-error
+              *ngIf="addressForm.controls['note'].hasError('required')"
+            >
+              note <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div class="flex flex-right">
+    <button mat-raised-button class="btn-primary" color="primary" type="submit">
+      Submit
+    </button>
+  </div>
+</form>

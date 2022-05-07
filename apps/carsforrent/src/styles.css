@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-right {justify-content: flex-end;}
+.flex-center {align-self: center;}
+.btn-primary {width: 150px;height: 40px;}
+
+body {
+  background: #bebebe;
+}
+
+
+
+@media only screen and (max-width: 600px) { 
+  .row {flex-wrap: wrap;}
+  form .col {
+    margin-right: 0px!important;
+  }
+  .mat-form-field {width: 100%;}
+}

@@ -1,0 +1,70 @@
+<div class="mat-elevation-z8">
+  <table
+    mat-table
+    class="full-width-table"
+    [dataSource]="dataSource"
+    matSort
+    aria-label="Elements"
+  >
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Booker Email</th>
+      <td mat-cell *matCellDef="let row">{{ row.email }}</td>
+    </ng-container>
+    <ng-container matColumnDef="startDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Booking starts</th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.start | dateformatter: 'MMM DD YYYY' }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="endDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Booking Ends</th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.end | dateformatter: 'MMM DD YYYY' }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="carName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Car Name</th>
+      <td mat-cell *matCellDef="let row">{{ row.carName }}</td>
+    </ng-container>
+    <ng-container matColumnDef="carType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Type</th>
+      <td mat-cell *matCellDef="let row">{{ row.carType }}</td>
+    </ng-container>
+    <ng-container matColumnDef="brand">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Brand</th>
+      <td mat-cell *matCellDef="let row">{{ row.brand }}</td>
+    </ng-container>
+    <ng-container matColumnDef="fuelType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Fuel Type</th>
+      <td mat-cell *matCellDef="let row">{{ row.fuelType }}</td>
+    </ng-container>
+    <ng-container matColumnDef="transmission">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>transmission</th>
+      <td mat-cell *matCellDef="let row">{{ row.transmission }}</td>
+    </ng-container>
+    <ng-container matColumnDef="seats">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>seats</th>
+      <td mat-cell *matCellDef="let row">{{ row.seats }}</td>
+    </ng-container>
+    <ng-container matColumnDef="deliveryType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>deliveryType</th>
+      <td mat-cell *matCellDef="let row">{{ row.deliveryType }}</td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>price</th>
+      <td mat-cell *matCellDef="let row">{{ row.price }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    #paginator
+    [length]="dataSource?.data?.length"
+    [pageIndex]="0"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 20]"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</div>

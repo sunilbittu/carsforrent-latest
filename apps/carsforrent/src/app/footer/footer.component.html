@@ -1,0 +1,26 @@
+<footer class="footer" color="primary">
+    <mat-toolbar class="footer" color="primary">
+        <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+
+            <button mat-button routerLink="/home" routerLinkActive="active-menu-item">
+              <div class="toolbar-icon">
+                <mat-icon>home</mat-icon>
+              </div>
+              <div class="toolbar-icon-text">
+                <span>home</span>
+              </div>
+            </button>
+      
+            <button mat-button (click)="handleClick()">
+              <div class="toolbar-icon">
+                <mat-icon>messages</mat-icon>
+              </div>
+              <div class="toolbar-icon-text">
+                <span>Contact Us</span>
+              </div>
+            </button>
+      
+          </div>
+        </mat-toolbar>
+  
+    </footer>   

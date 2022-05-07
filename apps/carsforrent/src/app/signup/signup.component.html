@@ -1,0 +1,87 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div fxFlexAlign="center">
+    <p>Signup</p>
+    <form [formGroup]="registerForm" (ngSubmit)="register()" class="form">
+      <mat-form-field>
+        <input
+          type="email"
+          matInput
+          placeholder="Email"
+          formControlName="email"
+        />
+        <mat-error
+          *ngIf="
+            this.registerForm.get('email')?.touched &&
+            this.registerForm.get('email')?.hasError('required')
+          "
+        >
+          Email is required</mat-error
+        >
+        <mat-error
+          *ngIf="
+            this.registerForm.get('email')?.touched &&
+            this.registerForm.get('email')?.hasError('email')
+          "
+        >
+          Email must be a valid Email</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+        <mat-error
+          *ngIf="
+            this.registerForm.get('password')?.touched &&
+            this.registerForm.get('password')?.hasError('required')
+          "
+        >
+          Password is required</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          type="password"
+          matInput
+          placeholder="Password Confirmation"
+          formControlName="passwordConfirm"
+        />
+        <mat-error
+          *ngIf="
+            this.registerForm.get('passwordConfirm')?.touched &&
+            this.registerForm.get('passwordConfirm')?.hasError('required')
+          "
+        >
+          Password Confirmation is required</mat-error
+        >
+      </mat-form-field>
+      <mat-error
+        *ngIf="
+          this.registerForm.get('passwordConfirm')?.dirty &&
+          this.registerForm.hasError('passwordsNotMatching')
+        "
+      >
+        Passwords are not matching!</mat-error
+      >
+      <div class="form-checkbox">
+        <input
+          type="checkbox"
+          formControlName="isAdmin"
+          id="isAdmin"
+          class="form-check-input"
+        />
+        <label for="isAdmin" class="form-check-label">Admin</label>
+      </div>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!registerForm.valid"
+      >
+        Sign Up
+      </button>
+    </form>
+  </div>
+</section>
