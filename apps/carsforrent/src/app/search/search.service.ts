@@ -10,11 +10,10 @@ export class SearchService {
   constructor(private http: HttpClient) {}
 
  /* getAvailablecars /api/cars/availablecars */
-  getAvailableCars(searchRequest: SearchRequest): Observable<any[]> {
+  getAvailableCars(): Observable<any[]> {
     return this.http
-      .post<any[]>(
+      .get<any[]>(
         '/api/cars/availablecars',
-        searchRequest
       )
       .pipe(
         tap((res: any[]) => {

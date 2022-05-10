@@ -32,7 +32,8 @@ export class ResultsComponent implements OnInit {
     const formattedStartDate = moment(dates.start).format('YYYY-MM-DD');
     const formattedEndDate = moment(dates.end).format('YYYY-MM-DD');
     const request = { address: address.address, city: address.city, start: formattedStartDate, end: formattedEndDate };
-    this.searchService.getAvailableCars(request).pipe().subscribe(
+    console.log(request);
+    this.searchService.getAvailableCars().pipe().subscribe(
       (res) => {
         this.cars = res;
         this.getAvailableCars();
@@ -40,11 +41,11 @@ export class ResultsComponent implements OnInit {
     );
   }
   getAvailableCars() {
-    const formattedData = _.uniqBy(this.cars.carDetails, '_id');
+    const formattedData = _.uniqBy(this.cars, '_id');
     this.cars = formattedData.length
       ? formattedData.map((item) => ({
           ...item,
-          img: images[Math.floor(Math.random() * 10)],
+          img: item.imageUrl
         }))
       : [];
   }

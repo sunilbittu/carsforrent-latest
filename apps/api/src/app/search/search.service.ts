@@ -4,7 +4,6 @@ import { Model } from 'mongoose';
 import * as moment from 'moment';
 import { SearchDetailsDTO } from './search.dto';
 import { Bookings } from '../types/bookings';
-import { BookingDetailsDTO } from '../booking/booking.dto';
 import { Cars } from '../types/cars';
 
 

@@ -1,11 +1,11 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get } from '@nestjs/common';
 import { SearchDetailsDTO } from './search.dto';
 import { SearchService } from './search.service';
 
 @Controller('cars')
 export class SearchController {
   constructor(private searchService: SearchService) {}
-  @Post('availablecars')
+  @Get('availablecars')
   async getAllAvailableCars(@Body() searchDetails: SearchDetailsDTO) {
     const carDetails =  await this.searchService.getAvailability(searchDetails);
     return {
